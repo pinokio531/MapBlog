@@ -2,14 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Daum 지도 시작하기</title>
+	<title>맛집 추천 서비스 Map Blog 입니다.</title>
 </head>
 <body>
 	<div id="map" style="width:1000px;height:800px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8d9fa66b5a57ed1782dfb50131b06dfd"></script>
 	<script>
-        //하루돈까스 37.558486, 126.935894
-        //신촌황소곱창 37.558715, 126.935051
 		var container = document.getElementById('map');
 		var options = {
 			center: new daum.maps.LatLng(37.556767, 126.936609),
@@ -27,5 +25,12 @@
         
         marker_Cafeteria.setMap(map)
 	</script>
+	<br>
+	<br>
+	{{cafeteria}}
+	<form>
+	<br><br>
+		<input type="button" value="다른 맛집 알아보기" onClick="window.location.reload()">
+	</form>
 </body>
 </html>
